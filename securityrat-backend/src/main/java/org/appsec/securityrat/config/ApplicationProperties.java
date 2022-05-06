@@ -16,7 +16,8 @@ public class ApplicationProperties {
     public enum AuthenticationType {
         CAS,
         FORM,
-	AZURE
+        AZURE,
+        LDAP
     }
 
     @Data
@@ -31,7 +32,23 @@ public class ApplicationProperties {
         private URL logoutUrl;
         private URL callbackUrl;
     }
+    
+    @Data
+    public static class Ldap {
+        private String url;
+      	private String managerDN;
+      	private String managerPassword;
+      	private String userBaseDN = "";
+      	private String userSearchFilter;
+      	private String groupRoleAttribute = "cn";
+      	private String groupBaseDN = "";
+      	private String groupSearchFilter = "(uniqueMember={0})";
+      	private String groupOfAdmins;
+      	private String groupOfTrainers;
+      	private String groupOfUsers;
+    }
 
     private Authentication authentication;
     private Cas cas;
+    private Ldap ldap;
 }

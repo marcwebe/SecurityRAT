@@ -78,6 +78,10 @@ public class SystemInfoImpl implements SystemInfo {
                 result.setType(Type.FORM);
                 break;
                 
+            case LDAP:
+                result.setType(Type.LDAP);
+                break;
+                
             default:
                 throw new UnsupportedOperationException(
                         "Authentication type not implemented: "
