@@ -176,7 +176,7 @@ jhipster:
 
 application:
   authentication:
-    type: LDAP # possible values are CAS, FORM, LDAP or AZURE
+    type: FORM # possible values are CAS, FORM, LDAP or AZURE
     registration: true # restrict the registration only to the administrators by setting the value to 'false'
   cas:
     loginUrl: https://localhost:8443/cas # Change to the URL your CAS server listens on
